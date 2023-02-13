@@ -6,13 +6,18 @@
     <!-- <button (click)="sidenav.toggle()">Show Sidebar</button> -->
     <mat-toolbar color="primary">
       <div>
-        <button (click)="sidenav.toggle()">Toggle</button>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
       </div>
-      <div>Logo</div>
-      <div>
-        <a routerLink="/auth/signup">Sign Up</a>
-        <a routerLink="/auth/login">Login</a>
-        <a routerLink="/training/new-training">Training</a>
+      <div><a routerLink="/">Logo</a></div>
+      <!-- <div fxFlex></div> -->
+      <div fxFlex fxLayout fxLayoutAlign="flex-end">
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+          <li><a routerLink="/auth/signup">Sign Up</a></li>
+          <li><a routerLink="/auth/login">Login</a></li>
+          <li><a routerLink="/training/new-training">Training</a></li>
+        </ul>
       </div>
     </mat-toolbar>
     <main>
