@@ -24,7 +24,7 @@ const routes: Routes =[
       },
       {
         path:'**',
-        component: PastTrainingsComponent
+        component: TrainingComponent
       }
     ]
   }
