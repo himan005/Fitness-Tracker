@@ -8,6 +8,7 @@ import { CurrentTrainingComponent } from './current-training/current-training.co
 import { NewTrainingComponent } from './new-training/new-training.component';
 import { PastTrainingsComponent } from './past-trainings/past-trainings.component';
 import { TrainingRoutingModule } from './training-routing.module';
+import { StopTrainingComponent } from './stop-training/stop-training.component';
 
 
 
@@ -16,7 +17,8 @@ import { TrainingRoutingModule } from './training-routing.module';
     TrainingComponent,
     CurrentTrainingComponent,
     NewTrainingComponent,
-    PastTrainingsComponent
+    PastTrainingsComponent,
+    StopTrainingComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,7 @@ import { TrainingRoutingModule } from './training-routing.module';
     TrainingRoutingModule,
     FlexLayoutModule,
     MaterialModule
-  ]
+  ],
+  entryComponents:[StopTrainingComponent]
 })
 export class TrainingModule { }
