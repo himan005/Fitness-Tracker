@@ -23,7 +23,7 @@ const routes: Routes =[
       //   component: CurrentTrainingComponent
       // },
       {
-        path:'**',
+        path:'',
         component: TrainingComponent
       }
     ]
