@@ -10,18 +10,18 @@ const routes: Routes =[
     path:'',
     component:TrainingComponent,
     children:[
-      {
-        path:'new-training',
-        component: NewTrainingComponent
-      },
-      {
-        path:'past-training',
-        component: PastTrainingsComponent
-      },
-      {
-        path:'current-training',
-        component: CurrentTrainingComponent
-      },
+      // {
+      //   path:'new-training',
+      //   component: NewTrainingComponent
+      // },
+      // {
+      //   path:'past-training',
+      //   component: PastTrainingsComponent
+      // },
+      // {
+      //   path:'current-training',
+      //   component: CurrentTrainingComponent
+      // },
       {
         path:'**',
         component: TrainingComponent
