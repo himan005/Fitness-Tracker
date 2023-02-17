@@ -2,5 +2,11 @@
     <mat-progress-spinner mode="determinate" [value]="progress" class="flex flex-col justify-center"></mat-progress-spinner>
     <h1 class="font-extrabold">{{progress}}%</h1>
     <p>Keep going</p>
-    <button mat-raised-button color="warn" (click)="stopTraining()">Stop</button>
+     <button mat-raised-button color="warn" (click)="stopTraining()">Stop</button>
+    <!-- <button mat-raised-button color="warn" (click)="paused()">Pause</button> -->
+    <!-- <div *ngIf="showButtons" class="flex justify-center">
+      <button mat-raised-button color="primary" (click)="continued()">Continoue</button>
+      <button mat-raises-button color="warm" (click)="stopTraining()">Stop</button>
+    </div> -->
+
 </section>

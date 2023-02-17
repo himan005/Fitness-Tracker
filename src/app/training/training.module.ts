@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './../material.module';
@@ -23,6 +24,8 @@ import { StopTrainingComponent } from './stop-training/stop-training.component';
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
     TrainingRoutingModule,
     FlexLayoutModule,
     MaterialModule
