@@ -1,7 +1,9 @@
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import {Observable} from 'rxjs'
+import { map} from 'rxjs/operators'
 import { NgForm } from '@angular/forms';
 import { Exercise } from './../exercise';
 import { TrainingService } from './../training.service';
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-new-training',
   templateUrl: './new-training.component.html',
@@ -9,14 +11,17 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class NewTrainingComponent implements OnInit {
 
-  // @Output() trainingStart = new EventEmitter<void>()
-
-  exercises:Exercise[] =[]
+  public exercises:Exercise[] = []
 
   constructor(public trainingService: TrainingService) { }
 
   ngOnInit(): void {
-    this.exercises = this.trainingService.getAvailableExercises();
+    this.trainingService.fetchAvailableExercises()
+    this.trainingService.exercisesChanged.subscribe(exercises =>{
+      this.exercises = exercises
+      console.log(this.exercises)
+    })
+
   }
 
   onStartTraining(form:NgForm){
